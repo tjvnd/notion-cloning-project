@@ -1,4 +1,4 @@
-const API_END_POINT = 'https://kdt.roto.codes/documents';
+const API_END_POINT = 'https://mwu.roto-frontend.programmers.co.kr/documents';
 
 const request = async (url, options = {}) => {
 	try {

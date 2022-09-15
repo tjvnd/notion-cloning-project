@@ -1,8 +1,15 @@
 import { request } from './config/index.js';
 
+const RootDocuments = async () => {
+	return await request ('', {
+		method: 'GET',
+	})
+};
+
 const getDocuments = async (id) => {
-	const url = id ? `/${id}` : '';
-	return await request(url, { method: 'GET' });
+	return await request (`/${id}`,{
+		method: 'GET',
+	})
 };
 
 const createDocument = async (document) => {
@@ -25,4 +32,4 @@ const deleteDocument = async (id) => {
 	});
 };
 
-export { getDocuments, createDocument, updateDocument, deleteDocument };
+export { RootDocuments, getDocuments, createDocument, updateDocument, deleteDocument };
